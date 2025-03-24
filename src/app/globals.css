@@ -1,26 +1,152 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+	border-color: hsl(var(--border));
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@keyframes slow-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.slow-spin {
+	animation: slow-spin 5s linear infinite;
+}
+
+@media (min-width: 420px) {
+	.xs\:text-6xl {
+		font-size: 3.75rem;
+		line-height: 1;
+	}
+}
+
+@theme {
+	--background: 0 0% 13%;
+	--background-light: 0 0% 19%;
+	--foreground: 0 0% 87%;
+	--card: 0 0% 3.9%;
+	--card-foreground: 0 0% 98%;
+	--popover: 0 0% 3.9%;
+	--popover-foreground: 0 0% 98%;
+	--primary: oklch(0.457 0.24 277.023);
+	--primary-foreground: 0 0% 13%;
+	--secondary: 193 100% 47%;
+	--secondary-foreground: 0 0% 13%;
+	--muted: 0 0% 14.9%;
+	--muted-foreground: 0 0% 71%;
+	--accent: 0 0% 14.9%;
+	--accent-foreground: 0 0% 98%;
+	--destructive: 0 62.8% 30.6%;
+	--destructive-foreground: 0 0% 98%;
+	--border: 0 0% 24%;
+	--input: 0 0% 14.9%;
+	--ring: 0 0% 83.1%;
+	--chart-1: 220 70% 50%;
+	--chart-2: 160 60% 45%;
+	--chart-3: 30 80% 55%;
+	--chart-4: 280 65% 60%;
+	--chart-5: 340 75% 55%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background-color: hsl(var(--background));
+	color: hsl(var(--foreground));
+	font-family: Montserrat, sans-serif;
+}
+
+@utility from-primary {
+	--tw-gradient-from: hsl(var(--primary));
+	--tw-gradient-to: hsl(var(--primary) / 0);
+	--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+@utility to-foreground {
+	--tw-gradient-to: hsl(var(--foreground));
+}
+
+@layer utilities {
+	.container {
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
+	.grid {
+		gap: 25px;
+	}
+	.pb-section {
+		padding-bottom: 250px;
+	}
+	.py-section {
+		padding-top: 250px;
+		padding-bottom: 250px;
+	}
+	.font-secondary {
+		font-family: 'Anton', 'sans-serif';
+	}
+	.text-foreground {
+		color: hsl(var(--foreground));
+	}
+	.text-muted-foreground {
+		color: hsl(var(--muted-foreground));
+	}
+	.text-background {
+		color: hsl(var(--background));
+	}
+	.text-destructive-foreground {
+		color: hsl(var(--destructive-foreground));
+	}
+	.text-foreground {
+		color: hsl(var(--foreground));
+	}
+	.text-muted-foreground {
+		color: hsl(var(--muted-foreground));
+	}
+	.text-primary {
+		color: var(--primary);
+	}
+	.text-primary-foreground {
+		color: hsl(var(--primary-foreground));
+	}
+	.text-secondary-foreground {
+		color: hsl(var(--secondary-foreground));
+	}
+	.bg-secondary {
+		background-color: hsl(var(--secondary));
+	}
+	.bg-destructive-70 {
+		background-color: hsl(var(--destructive) / 0.7);
+	}
+	.bg-background-light {
+		background-color: hsl(var(--background-light));
+	}
+	.bg-foreground-80-hover {
+		background-color: hsl(var(--foreground) / 0.8);
+	}
+	.bg-primary {
+		background-color: var(--primary);
+	}
+	.bg-primary-hover {
+		background-color: hsl(var(--primary));
+	}
+	.bg-center-hover {
+		background-position: 50% !important;
+	}
+	.text-foreground-hover {
+		color: hsl(var(--foreground));
+	}
+	.text-primary-hover {
+		color: hsl(var(--primary));
+	}
+	.text-primary-foreground-hover {
+		color: hsl(var(--primary-foreground));
+	}
+	.underline-hover {
+		text-decoration-line: underline;
+	}
 }
