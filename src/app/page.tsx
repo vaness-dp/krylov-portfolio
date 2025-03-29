@@ -7,6 +7,7 @@ import { Preloader } from '@/components/preloader/Preloader'
 import { Projects } from '@/components/projects/Projects'
 import { Stack } from '@/components/stack/Stack'
 import { Background } from '@/components/ui/Background'
+import { Burger } from '@/components/ui/Burger'
 
 import { useLoadingStore } from '@/store/loadingStore'
 
@@ -15,6 +16,7 @@ export default function Home() {
 
 	return (
 		<>
+			<Burger />
 			<main>
 				<Hero />
 				<About />

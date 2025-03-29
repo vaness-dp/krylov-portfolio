@@ -7,17 +7,17 @@ interface IStackData {
 export const frontendData: IStackData[] = [
 	{
 		text: 'Javascript',
-		srcImage: '/images/stack/javascript.png',
+		srcImage: '/images/stack/javascript.svg',
 		altImage: 'Javascript'
 	},
 	{
 		text: 'Typescript',
-		srcImage: '/images/stack/typescript.png',
+		srcImage: '/images/stack/typescript.svg',
 		altImage: 'Typescript'
 	},
 	{
 		text: 'React',
-		srcImage: '/images/stack/react.png',
+		srcImage: '/images/stack/react.svg',
 		altImage: 'React'
 	},
 	{
@@ -27,22 +27,22 @@ export const frontendData: IStackData[] = [
 	},
 	{
 		text: 'Tailwind CSS',
-		srcImage: '/images/stack/tailwind-css.png',
+		srcImage: '/images/stack/tailwind-css.svg',
 		altImage: 'Tailwind CSS'
 	},
 	{
 		text: 'HTML',
-		srcImage: '/images/stack/html.png',
+		srcImage: '/images/stack/html.svg',
 		altImage: 'HTML'
 	},
 	{
 		text: 'Framer Motion',
-		srcImage: '/images/stack/framer-motion.png',
+		srcImage: '/images/stack/framer-motion.svg',
 		altImage: 'Framer Motion'
 	},
 	{
 		text: 'SASS',
-		srcImage: '/images/stack/sass.png',
+		srcImage: '/images/stack/sass.svg',
 		altImage: 'SASS'
 	}
 ]
@@ -50,7 +50,7 @@ export const frontendData: IStackData[] = [
 export const backendData: IStackData[] = [
 	{
 		text: 'Node.js',
-		srcImage: '/images/stack/node-js.png',
+		srcImage: '/images/stack/node-js.svg',
 		altImage: 'Node.js'
 	}
 ]
@@ -58,32 +58,32 @@ export const backendData: IStackData[] = [
 export const toolsData: IStackData[] = [
 	{
 		text: 'Jest',
-		srcImage: '/images/stack/jest.png',
+		srcImage: '/images/stack/jest.svg',
 		altImage: 'Jest'
 	},
 	{
 		text: 'Git',
-		srcImage: '/images/stack/git.png',
+		srcImage: '/images/stack/git.svg',
 		altImage: 'Git'
 	},
 	{
 		text: 'GitLab',
-		srcImage: '/images/stack/gitlab.png',
+		srcImage: '/images/stack/gitlab.svg',
 		altImage: 'GitLab'
 	},
 	{
 		text: 'VSCode',
-		srcImage: '/images/stack/vscode.png',
+		srcImage: '/images/stack/vscode.svg',
 		altImage: 'VSCode'
 	},
 	{
 		text: 'WebStorm',
-		srcImage: '/images/stack/webstorm.png',
+		srcImage: '/images/stack/webstorm.svg',
 		altImage: 'WebStorm'
 	},
 	{
 		text: 'Figma',
-		srcImage: '/images/stack/figma.png',
+		srcImage: '/images/stack/figma.svg',
 		altImage: 'Figma'
 	}
 ]
