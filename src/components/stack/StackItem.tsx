@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { StackTitle } from '@/components/stack/StackTitle'
-import { AnimatedText } from '@/components/ui/AnimatedText'
+import AnimatedOnScroll from '@/components/ui/AnimatedOnScroll'
 
 interface IStackItem {
 	title: string
@@ -14,10 +14,9 @@ export function StackItem({ title, stackData }: IStackItem) {
 			<StackTitle title={title} />
 			<div className="flex flex-wrap gap-x-11 gap-y-9 sm:col-span-7">
 				{stackData.map((item, index) => (
-					<AnimatedText
+					<AnimatedOnScroll
 						key={index}
-						direction="up"
-						delay={0.3}
+						delay={index * 0.3}
 					>
 						<div
 							className="flex items-center gap-3.5 leading-none"
@@ -33,7 +32,7 @@ export function StackItem({ title, stackData }: IStackItem) {
 							</div>
 							<span className="text-2xl capitalize">{item.text}</span>
 						</div>
-					</AnimatedText>
+					</AnimatedOnScroll>
 				))}
 			</div>
 		</div>

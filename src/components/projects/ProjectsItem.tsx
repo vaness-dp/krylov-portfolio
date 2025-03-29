@@ -4,7 +4,7 @@ import { ProjectsDot } from '@/components/projects/ProjectsDot'
 import { ProjectsSvg } from '@/components/projects/ProjectsSvg'
 import { projectsData } from '@/components/projects/projects.data'
 
-export function ProjectsItem({}) {
+export function ProjectsItem() {
 	return (
 		<>
 			{projectsData.map((item, index) => (

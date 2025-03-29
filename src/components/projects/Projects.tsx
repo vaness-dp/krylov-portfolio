@@ -1,5 +1,5 @@
 import { ProjectsItem } from '@/components/projects/ProjectsItem'
-import { AnimatedText } from '@/components/ui/AnimatedText'
+import AnimatedOnScroll from '@/components/ui/AnimatedOnScroll'
 import { Heading } from '@/components/ui/Heading'
 
 export function Projects() {
@@ -10,16 +10,14 @@ export function Projects() {
 		>
 			<div className="container">
 				<Heading text="Selected projects" />
-				<AnimatedText
-					as="div"
-					direction="up"
+				<AnimatedOnScroll
 					delay={0.1}
 					className="relative"
 				>
 					<div className="flex flex-col max-md:gap-10">
 						<ProjectsItem />
 					</div>
-				</AnimatedText>
+				</AnimatedOnScroll>
 			</div>
 		</section>
 	)

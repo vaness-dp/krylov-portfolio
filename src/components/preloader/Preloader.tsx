@@ -3,18 +3,32 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
-import { letters } from '@/components/about/preloader/preloader.data'
+import { letters } from '@/components/preloader/preloader.data'
+
+import { useLoadingStore } from '@/store/loadingStore'
 
 export function Preloader() {
-	const [isLoading, setIsLoading] = useState(true) // Состояние загрузки
+	const { setIsLoading } = useLoadingStore()
+	const [animateOut, setAnimateOut] = useState(false)
 
 	useEffect(() => {
-		const timer = setTimeout(() => {
-			setIsLoading(false)
-		}, 1500)
+		const delayBeforeExit = 1400
+		const exitDuration = 1400
 
-		return () => clearTimeout(timer)
+		const exitTriggerTimer = setTimeout(() => {
+			setAnimateOut(true)
+		}, delayBeforeExit)
+
+		const exitCompleteTimer = setTimeout(() => {
+			setIsLoading(false)
+		}, delayBeforeExit + exitDuration)
+
+		return () => {
+			clearTimeout(exitTriggerTimer)
+			clearTimeout(exitCompleteTimer)
+		}
 	}, [])
+
 	return (
 		<div className="fixed inset-0 z-[6] flex">
 			{Array.from({ length: 10 }).map((_, index) => (
@@ -22,7 +36,7 @@ export function Preloader() {
 					key={index}
 					className="preloader-item h-full w-[10%] bg-black"
 					initial={{ translateY: '0%' }}
-					animate={isLoading ? { translateY: '0%' } : { translateY: '100%' }}
+					animate={!animateOut ? { translateY: '0%' } : { translateY: '100%' }}
 					transition={{ duration: 0.5, delay: index * 0.1 }}
 				/>
 			))}
@@ -31,13 +45,13 @@ export function Preloader() {
 					<motion.span
 						key={index}
 						className="inline-block"
-						initial={{ translateY: '100%', opacity: 0 }} // Начальное состояние
+						initial={{ translateY: '100%', opacity: 0 }}
 						animate={
-							isLoading
+							!animateOut
 								? { translateY: '0%', opacity: 1 }
 								: { translateY: '0%', opacity: 0 }
 						}
-						transition={{ duration: 0.3, delay: index * 0.1 }} // Задержка для каждого элемента
+						transition={{ duration: 0.3, delay: index * 0.1 }}
 					>
 						{letter}
 					</motion.span>
