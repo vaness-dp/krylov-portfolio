@@ -125,6 +125,9 @@ body {
 	.bg-background-light {
 		background-color: hsl(var(--background-light));
 	}
+	.bg-foreground {
+		background-color: hsl(var(--foreground));
+	}
 	.bg-foreground-80-hover {
 		background-color: hsl(var(--foreground) / 0.8);
 	}
