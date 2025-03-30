@@ -11,6 +11,7 @@ import { Preloader } from '@/components/preloader/Preloader'
 import { Projects } from '@/components/projects/Projects'
 import { Stack } from '@/components/stack/Stack'
 import { Background } from '@/components/ui/Background'
+import { Mail } from '@/components/ui/Mail'
 import { Overlay } from '@/components/ui/Overlay'
 
 import { useLoadingStore } from '@/store/loadingStore'
@@ -34,7 +35,10 @@ export default function Home() {
 					onClickAction={() => setIsMenuOpen(false)}
 				/>
 			)}
-			<Menu isOpen={isMenuOpen} />
+			<Menu
+				isOpen={isMenuOpen}
+				onLinkClick={() => setIsMenuOpen(false)}
+			/>
 			<main>
 				<Hero />
 				<About />
@@ -44,6 +48,7 @@ export default function Home() {
 			<Footer />
 			{isLoading && <Preloader />}
 			<Background />
+			<Mail />
 		</>
 	)
 }

@@ -3,7 +3,13 @@ import Link from 'next/link'
 
 import { menuData, menuSocial } from '@/components/menu-burger/menu.data'
 
-export function Menu({ isOpen }: { isOpen: boolean }) {
+export function Menu({
+	isOpen,
+	onLinkClick
+}: {
+	isOpen: boolean
+	onLinkClick: () => void
+}) {
 	return (
 		<motion.div
 			initial={{ x: '100%' }}
@@ -32,6 +38,7 @@ export function Menu({ isOpen }: { isOpen: boolean }) {
 								<li key={index}>
 									<Link
 										href={item.href}
+										target="_blank"
 										className="text-lg capitalize hover:underline"
 									>
 										{item.name}
@@ -47,6 +54,7 @@ export function Menu({ isOpen }: { isOpen: boolean }) {
 								<li key={index}>
 									<Link
 										href={item.href}
+										onClick={onLinkClick}
 										className="text-lg capitalize hover:underline"
 									>
 										{item.name}

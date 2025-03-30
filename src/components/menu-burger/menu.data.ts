@@ -1,8 +1,8 @@
 export const menuData = [
 	{ name: 'Home', href: '/' },
-	{ name: 'About me', href: '/about-me' },
-	{ name: 'Experience', href: '/experience' },
-	{ name: 'Projects', href: '/projects' }
+	{ name: 'About me', href: '#about-me' },
+	{ name: 'Experience', href: '#experience' },
+	{ name: 'Projects', href: '#selected-projects' }
 ]
 
 export const menuSocial = [
