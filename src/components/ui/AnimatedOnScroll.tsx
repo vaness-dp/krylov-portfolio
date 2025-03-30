@@ -1,11 +1,12 @@
 'use client'
 
 import { motion, useAnimation, useInView } from 'framer-motion'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { type CSSProperties, useEffect, useRef, useState } from 'react'
 
 interface AnimatedOnScrollProps {
 	children: React.ReactNode
 	className?: string
+	style?: CSSProperties
 	delay?: number // задержка в секундах
 	duration?: number // длительность в секундах
 }
@@ -13,6 +14,7 @@ interface AnimatedOnScrollProps {
 const AnimatedOnScroll: React.FC<AnimatedOnScrollProps> = ({
 	children,
 	className,
+	style,
 	delay = 0,
 	duration = 0.5
 }) => {
@@ -62,6 +64,7 @@ const AnimatedOnScroll: React.FC<AnimatedOnScrollProps> = ({
 		<motion.div
 			ref={ref}
 			className={className}
+			style={style}
 			initial={{ opacity: 0, y: scrollDirection === 'down' ? 50 : -50 }}
 			animate={controls}
 		>

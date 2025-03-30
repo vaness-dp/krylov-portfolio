@@ -4,8 +4,23 @@
 	border-color: hsl(var(--border));
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
+
+* {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
 button {
 	cursor: pointer;
+}
+
+@media (min-width: 1148px) {
+	.container {
+		max-width: 1148px;
+	}
 }
 
 @keyframes slow-spin {
@@ -93,8 +108,8 @@ body {
 	.font-secondary {
 		font-family: 'Anton', 'sans-serif';
 	}
-	.text-foreground {
-		color: hsl(var(--foreground));
+	.text-transparent {
+		color: transparent;
 	}
 	.text-muted-foreground {
 		color: hsl(var(--muted-foreground));
@@ -143,6 +158,9 @@ body {
 	}
 	.bg-center-hover {
 		background-position: 50% !important;
+	}
+	.bg-right {
+		background-position: 100%;
 	}
 	.text-foreground-hover {
 		color: hsl(var(--foreground));

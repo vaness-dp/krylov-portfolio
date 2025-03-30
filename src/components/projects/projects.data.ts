@@ -10,6 +10,11 @@ interface IProjectsData {
 	stack: IStackItem[] // Массив технологий стека
 }
 
+interface IImageData {
+	src: string
+	alt: string
+}
+
 export const projectsData: IProjectsData[] = [
 	{
 		href: '/',
@@ -40,5 +45,22 @@ export const projectsData: IProjectsData[] = [
 			{ name: 'CSS', hasDot: true },
 			{ name: 'Javascript', hasDot: false }
 		]
+	},
+	{
+		href: '/',
+		numberProject: '_04.',
+		title: 'Product App',
+		stack: [
+			{ name: 'Next.js', hasDot: true },
+			{ name: 'Tailwind CSS', hasDot: true },
+			{ name: 'Zustand', hasDot: false }
+		]
 	}
+]
+
+export const imageData: IImageData[] = [
+	{ src: '/images/projects/hangman-game.png', alt: 'Hangman game App' },
+	{ src: '/images/projects/w-wave.png', alt: 'W-wave Landing Page' },
+	{ src: '/images/projects/crm-system.png', alt: 'CRM System' },
+	{ src: '/images/projects/product-app.png', alt: 'Product App' }
 ]

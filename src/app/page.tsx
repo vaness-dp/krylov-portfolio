@@ -13,6 +13,7 @@ import { Stack } from '@/components/stack/Stack'
 import { Background } from '@/components/ui/Background'
 import { Mail } from '@/components/ui/Mail'
 import { Overlay } from '@/components/ui/Overlay'
+import { Scrollbar } from '@/components/ui/Scrollbar'
 
 import { useLoadingStore } from '@/store/loadingStore'
 
@@ -47,6 +48,7 @@ export default function Home() {
 			</main>
 			<Footer />
 			{isLoading && <Preloader />}
+			<Scrollbar />
 			<Background />
 			<Mail />
 		</>
