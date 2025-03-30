@@ -4,6 +4,10 @@
 	border-color: hsl(var(--border));
 }
 
+button {
+	cursor: pointer;
+}
+
 @keyframes slow-spin {
 	0% {
 		transform: rotate(0deg);

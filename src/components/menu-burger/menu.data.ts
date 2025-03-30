@@ -6,8 +6,8 @@ export const menuData = [
 ]
 
 export const menuSocial = [
-	{ name: 'Youtube', href: '/https://www.youtube.com/@van3ss' },
-	{ name: 'Telegram', href: '/https://www.t.me/vaness_dev_youtube' },
-	{ name: 'Github', href: '/https://github.com/vaness-dp' },
+	{ name: 'Youtube', href: 'https://www.youtube.com/@van3ss' },
+	{ name: 'Telegram', href: 'https://www.t.me/vaness_dev_youtube' },
+	{ name: 'Github', href: 'https://github.com/vaness-dp' },
 	{ name: 'Linkedin', href: '/' }
 ]
