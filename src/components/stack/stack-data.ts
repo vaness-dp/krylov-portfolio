@@ -12,37 +12,37 @@ export const frontendData: IStackData[] = [
 	},
 	{
 		text: 'Typescript',
-		srcImage: '/images/stack/typescript.svg',
+		srcImage: 'images/stack/typescript.svg',
 		altImage: 'Typescript'
 	},
 	{
 		text: 'React',
-		srcImage: '/images/stack/react.svg',
+		srcImage: 'images/stack/react.svg',
 		altImage: 'React'
 	},
 	{
 		text: 'Next.Js',
-		srcImage: '/images/stack/next-js.png',
+		srcImage: 'images/stack/next-js.png',
 		altImage: 'Next.Js'
 	},
 	{
 		text: 'Tailwind CSS',
-		srcImage: '/images/stack/tailwind-css.svg',
+		srcImage: 'images/stack/tailwind-css.svg',
 		altImage: 'Tailwind CSS'
 	},
 	{
 		text: 'HTML',
-		srcImage: '/images/stack/html.svg',
+		srcImage: 'images/stack/html.svg',
 		altImage: 'HTML'
 	},
 	{
 		text: 'Framer Motion',
-		srcImage: '/images/stack/framer-motion.svg',
+		srcImage: 'images/stack/framer-motion.svg',
 		altImage: 'Framer Motion'
 	},
 	{
 		text: 'SASS',
-		srcImage: '/images/stack/sass.svg',
+		srcImage: 'images/stack/sass.svg',
 		altImage: 'SASS'
 	}
 ]
@@ -50,7 +50,7 @@ export const frontendData: IStackData[] = [
 export const backendData: IStackData[] = [
 	{
 		text: 'Node.js',
-		srcImage: '/images/stack/node-js.svg',
+		srcImage: 'images/stack/node-js.svg',
 		altImage: 'Node.js'
 	}
 ]
@@ -58,32 +58,32 @@ export const backendData: IStackData[] = [
 export const toolsData: IStackData[] = [
 	{
 		text: 'Jest',
-		srcImage: '/images/stack/jest.svg',
+		srcImage: 'images/stack/jest.svg',
 		altImage: 'Jest'
 	},
 	{
 		text: 'Git',
-		srcImage: '/images/stack/git.svg',
+		srcImage: 'images/stack/git.svg',
 		altImage: 'Git'
 	},
 	{
 		text: 'GitLab',
-		srcImage: '/images/stack/gitlab.svg',
+		srcImage: 'images/stack/gitlab.svg',
 		altImage: 'GitLab'
 	},
 	{
 		text: 'VSCode',
-		srcImage: '/images/stack/vscode.svg',
+		srcImage: 'images/stack/vscode.svg',
 		altImage: 'VSCode'
 	},
 	{
 		text: 'WebStorm',
-		srcImage: '/images/stack/webstorm.svg',
+		srcImage: 'images/stack/webstorm.svg',
 		altImage: 'WebStorm'
 	},
 	{
 		text: 'Figma',
-		srcImage: '/images/stack/figma.svg',
+		srcImage: 'images/stack/figma.svg',
 		altImage: 'Figma'
 	}
 ]

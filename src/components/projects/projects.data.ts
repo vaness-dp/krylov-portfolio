@@ -59,8 +59,8 @@ export const projectsData: IProjectsData[] = [
 ]
 
 export const imageData: IImageData[] = [
-	{ src: '/images/projects/hangman-game.png', alt: 'Hangman game App' },
-	{ src: '/images/projects/w-wave.png', alt: 'W-wave Landing Page' },
-	{ src: '/images/projects/crm-system.png', alt: 'CRM System' },
-	{ src: '/images/projects/product-app.png', alt: 'Product App' }
+	{ src: 'images/projects/hangman-game.png', alt: 'Hangman game App' },
+	{ src: 'images/projects/w-wave.png', alt: 'W-wave Landing Page' },
+	{ src: 'images/projects/crm-system.png', alt: 'CRM System' },
+	{ src: 'images/projects/product-app.png', alt: 'Product App' }
 ]
