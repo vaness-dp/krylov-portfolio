@@ -7,7 +7,7 @@ interface IStackData {
 export const frontendData: IStackData[] = [
 	{
 		text: 'Javascript',
-		srcImage: '/images/stack/javascript.svg',
+		srcImage: 'images/stack/javascript.svg',
 		altImage: 'Javascript'
 	},
 	{
