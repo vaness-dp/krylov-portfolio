@@ -4,7 +4,10 @@ const nextConfig: NextConfig = {
 	output: 'export',
 	basePath: '/krylov-portfolio',
 	assetPrefix: '/krylov-portfolio/',
-	trailingSlash: true
+	trailingSlash: true,
+	images: {
+		unoptimized: true
+	}
 }
 
 export default nextConfig
