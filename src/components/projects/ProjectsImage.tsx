@@ -27,6 +27,7 @@ export function ProjectsImage({ offsetY, isVisible, index }: IProjectsImage) {
 				width={400}
 				height={500}
 				decoding="async"
+				priority
 				className="absolute inset-0 h-full w-full object-cover transition-all duration-500"
 			/>
 		</motion.div>

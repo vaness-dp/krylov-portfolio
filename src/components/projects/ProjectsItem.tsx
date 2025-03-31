@@ -1,4 +1,3 @@
-// ProjectsItem.tsx
 import Link from 'next/link'
 import React from 'react'
 
@@ -22,7 +21,7 @@ export function ProjectsItem({
 			{projectsData.map((item, index) => (
 				<Link
 					key={item.numberProject}
-					href={item.href}
+					href={`/projects/${item.id}#${item.id}`}
 					className="project-item group py-5 leading-none transition-all first:!pt-0 last:border-none last:pb-0 md:border-b md:group-hover/projects:opacity-30 md:hover:!opacity-100"
 					onMouseEnter={(_e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>
 						onItemHover(index)
