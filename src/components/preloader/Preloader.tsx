@@ -8,7 +8,7 @@ import { letters } from '@/components/preloader/preloader.data'
 import { useLoadingStore } from '@/store/loadingStore'
 
 export function Preloader() {
-	const { setIsLoading } = useLoadingStore()
+	const { hideLoader } = useLoadingStore()
 	const [animateOut, setAnimateOut] = useState(false)
 
 	useEffect(() => {
@@ -20,7 +20,7 @@ export function Preloader() {
 		}, delayBeforeExit)
 
 		const exitCompleteTimer = setTimeout(() => {
-			setIsLoading(false)
+			hideLoader()
 		}, delayBeforeExit + exitDuration)
 
 		return () => {
@@ -30,7 +30,9 @@ export function Preloader() {
 	}, [])
 
 	return (
-		<div className="fixed inset-0 z-[6] flex">
+		<div
+			className={`fixed inset-0 z-[6] flex ${animateOut ? 'pointer-events-none' : ''}`}
+		>
 			{Array.from({ length: 10 }).map((_, index) => (
 				<motion.div
 					key={index}

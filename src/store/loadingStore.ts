@@ -1,15 +1,20 @@
+// store/loadingStore.ts
 import { create } from 'zustand'
 
 interface LoadingState {
-	isLoading: boolean
+	isPreloading: boolean // для главной страницы
+	isLoader: boolean // для переходов (например, при клике на Back)
+	showPreloader: () => void
+	hidePreloader: () => void
 	showLoader: () => void
 	hideLoader: () => void
-	setIsLoading: (loading: boolean) => void
 }
 
 export const useLoadingStore = create<LoadingState>(set => ({
-	isLoading: true,
-	showLoader: () => set({ isLoading: true }),
-	hideLoader: () => set({ isLoading: false }),
-	setIsLoading: loading => set({ isLoading: loading })
+	isPreloading: true,
+	isLoader: false,
+	showPreloader: () => set({ isPreloading: true }),
+	hidePreloader: () => set({ isPreloading: false }),
+	showLoader: () => set({ isLoader: true }),
+	hideLoader: () => set({ isLoader: false })
 }))

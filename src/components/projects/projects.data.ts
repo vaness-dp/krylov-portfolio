@@ -47,7 +47,7 @@ export const projectsData: IProjectsData[] = [
 		numberProject: '_02.',
 		title: 'W-Wave Radio',
 		year: '2023',
-		tech: 'HTML, Tailwind CSS, Javascript',
+		tech: 'HTML, CSS, Javascript',
 		description:
 			'I developed Wwave-radio, a captivating landing page designed to promote an online radio station. Utilizing a stack of HTML, SCSS, and JavaScript, the project features straightforward layout and design principles. A slider, implemented using libraries, enhances user engagement by showcasing featured content dynamically. Visual animations created with CSS add a modern touch, while the responsive design ensures optimal viewing experiences across various devices. Wwave-radio effectively captures the essence of the radio station, inviting visitors to explore and enjoy its offerings.',
 		stack: [
