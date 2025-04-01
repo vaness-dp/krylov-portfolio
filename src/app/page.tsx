@@ -8,11 +8,13 @@ import { Stack } from '@/components/stack/Stack'
 
 export default function Home() {
 	return (
-		<Layout>
-			<Hero />
-			<About />
-			<Stack />
-			<Projects />
-		</Layout>
+		<>
+			<Layout>
+				<Hero />
+				<About />
+				<Stack />
+				<Projects />
+			</Layout>
+		</>
 	)
 }

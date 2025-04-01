@@ -34,13 +34,13 @@ export function Preloader() {
 			{Array.from({ length: 10 }).map((_, index) => (
 				<motion.div
 					key={index}
-					className="preloader-item h-full w-[10%] bg-black"
+					className="h-full w-[10%] bg-black"
 					initial={{ translateY: '0%' }}
 					animate={!animateOut ? { translateY: '0%' } : { translateY: '100%' }}
 					transition={{ duration: 0.5, delay: index * 0.1 }}
 				/>
 			))}
-			<p className="name-text font-secondary absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 overflow-hidden text-center text-[20vw] leading-none lg:text-[200px]">
+			<p className="font-secondary absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 overflow-hidden text-center text-[20vw] leading-none lg:text-[200px]">
 				{letters.map((letter, index) => (
 					<motion.span
 						key={index}

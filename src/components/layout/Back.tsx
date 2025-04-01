@@ -4,7 +4,7 @@ import Link from 'next/link'
 export function Back() {
 	return (
 		<Link
-			href="/"
+			href="/#selected-projects"
 			className="group mb-16 inline-flex h-12 items-center gap-2"
 		>
 			<LucideArrowLeft

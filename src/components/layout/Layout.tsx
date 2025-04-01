@@ -9,6 +9,7 @@ import { Background } from '@/components/ui/Background'
 import { Mail } from '@/components/ui/Mail'
 import { Scrollbar } from '@/components/ui/Scrollbar'
 
+// Импортируем два store, но с разными алиасами
 import { useLoadingStore } from '@/store/loadingStore'
 
 export function Layout({ children }: PropsWithChildren) {

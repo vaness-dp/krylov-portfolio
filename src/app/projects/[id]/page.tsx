@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { Back } from '@/components/layout/Back'
 import { Layout } from '@/components/layout/Layout'
 import { projectsData } from '@/components/projects/projects.data'
+import AnimatedOnScroll from '@/components/ui/AnimatedOnScroll'
 import { ProjectHeading } from '@/components/ui/ProjectHeading'
 
 export async function generateStaticParams() {
@@ -24,6 +25,8 @@ export default async function ProjectPage({
 		notFound()
 	}
 
+	await new Promise(resolve => setTimeout(resolve, 900))
+
 	return (
 		<Layout>
 			<section className="pt-5 pb-14">
@@ -36,26 +39,26 @@ export default async function ProjectPage({
 							linkHref={project.linkHref}
 						/>
 						<div className="mx-auto max-w-[635px] space-y-7 pb-20">
-							<div>
+							<AnimatedOnScroll duration={0.6}>
 								<p className="text-muted-foreground font-secondary mb-3">
 									Year
 								</p>
 								<div className="text-lg">{project.year}</div>
-							</div>
-							<div>
+							</AnimatedOnScroll>
+							<AnimatedOnScroll duration={0.6}>
 								<p className="text-muted-foreground font-secondary mb-3">
 									Tech & Technique
 								</p>
 								<div className="text-lg">{project.tech}</div>
-							</div>
-							<div>
+							</AnimatedOnScroll>
+							<AnimatedOnScroll duration={0.6}>
 								<p className="text-muted-foreground font-secondary mb-3">
 									Description
 								</p>
 								<div className="text-lg">
 									<p>{project.description}</p>
 								</div>
-							</div>
+							</AnimatedOnScroll>
 						</div>
 					</div>
 				</div>
