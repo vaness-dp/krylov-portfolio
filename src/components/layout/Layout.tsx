@@ -5,13 +5,8 @@ import { usePathname } from 'next/navigation'
 import type { PropsWithChildren } from 'react'
 import { useEffect } from 'react'
 
-import { Footer } from '@/components/footer/Footer'
-import { MobileMenu } from '@/components/menu-burger/MobileMenu'
 import { Preloader } from '@/components/preloader/Preloader'
-import { Background } from '@/components/ui/Background'
 import { Loader } from '@/components/ui/Loader'
-import { Mail } from '@/components/ui/Mail'
-import { Scrollbar } from '@/components/ui/Scrollbar'
 
 import { useLoadingStore } from '@/store/loadingStore'
 
@@ -36,12 +31,7 @@ export function Layout({ children }: PropsWithChildren) {
 				{pathname === '/' && isPreloading && <Preloader />}
 				{pathname !== '/' && isLoader && <Loader />}
 			</AnimatePresence>
-			<MobileMenu />
 			<main>{children}</main>
-			<Footer />
-			<Scrollbar />
-			<Background />
-			<Mail />
 		</>
 	)
 }

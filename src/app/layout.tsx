@@ -2,6 +2,12 @@ import type { Metadata } from 'next'
 import { Anton, Montserrat } from 'next/font/google'
 import React from 'react'
 
+import { Footer } from '@/components/footer/Footer'
+import { MobileMenu } from '@/components/menu-burger/MobileMenu'
+import { Background } from '@/components/ui/Background'
+import { Mail } from '@/components/ui/Mail'
+import { Scrollbar } from '@/components/ui/Scrollbar'
+
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -29,8 +35,18 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="en">
-			<body className={montserrat.variable}>{children}</body>
+		<html
+			lang="en"
+			className="scroll-smooth"
+		>
+			<body className={montserrat.variable}>
+				<MobileMenu />
+				{children}
+				<Footer />
+				<Scrollbar />
+				<Background />
+				<Mail />
+			</body>
 		</html>
 	)
 }
