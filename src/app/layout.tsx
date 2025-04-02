@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Anton, Montserrat } from 'next/font/google'
 import React from 'react'
 
-import { Footer } from '@/components/footer/Footer'
 import { MobileMenu } from '@/components/menu-burger/MobileMenu'
 import { Background } from '@/components/ui/Background'
 import { Mail } from '@/components/ui/Mail'
@@ -42,7 +41,6 @@ export default function RootLayout({
 			<body className={montserrat.variable}>
 				<MobileMenu />
 				{children}
-				<Footer />
 				<Scrollbar />
 				<Background />
 				<Mail />

@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import type { PropsWithChildren } from 'react'
 import { useEffect } from 'react'
 
+import { Footer } from '@/components/footer/Footer'
 import { Preloader } from '@/components/preloader/Preloader'
 import { Loader } from '@/components/ui/Loader'
 
@@ -32,6 +33,7 @@ export function Layout({ children }: PropsWithChildren) {
 				{pathname !== '/' && isLoader && <Loader />}
 			</AnimatePresence>
 			<main>{children}</main>
+			<Footer />
 		</>
 	)
 }
