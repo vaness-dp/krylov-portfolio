@@ -3,7 +3,8 @@ import React from 'react'
 
 import { ProjectsDot } from '@/components/projects/ProjectsDot'
 import { ProjectsSvg } from '@/components/projects/ProjectsSvg'
-import { IProjectsData } from '@/components/projects/projects.data'
+
+import { IProjectsData } from '@/types/types'
 
 interface IProjectsItem {
 	projectsData: IProjectsData[]

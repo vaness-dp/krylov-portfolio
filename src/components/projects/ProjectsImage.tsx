@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-import { IImageData } from '@/components/projects/projects.data'
+import { IImageData } from '@/types/types'
 
 interface IProjectsImage {
 	offsetY: number
@@ -33,7 +33,7 @@ export function ProjectsImage({
 				width={400}
 				height={500}
 				decoding="async"
-				priority
+				// priority
 				className="absolute inset-0 h-full w-full object-cover transition-all duration-500"
 			/>
 		</motion.div>

@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 
-import { IStackData } from '@/components/stack/stack-data'
+import { IStackData } from '@/types/types'
 
 export interface IStackDataResponse {
 	frontendData: IStackData[]
@@ -10,10 +10,14 @@ export interface IStackDataResponse {
 }
 
 export function useStackData() {
+	const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 	return useQuery<IStackDataResponse>({
 		queryKey: ['stackData'],
 		queryFn: async () => {
-			const { data } = await axios.get<IStackDataResponse>('/api/stack')
+			const { data } = await axios.get<IStackDataResponse>(
+				`${basePath}/api/stack.json`
+			)
 			return data
 		}
 	})
