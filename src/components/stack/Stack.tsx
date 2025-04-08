@@ -1,12 +1,25 @@
 import { StackItem } from '@/components/stack/StackItem'
-import {
-	backendData,
-	frontendData,
-	toolsData
-} from '@/components/stack/stack-data'
 import { Heading } from '@/components/ui/Heading'
 
+import { useStackData } from '@/hooks/useStackData'
+
+import { getFallback } from '@/utils/get-fallback'
+
+import { FallbackMessage } from '../ui/FallbackMessage'
+
 export function Stack() {
+	const { data, isLoading, error } = useStackData()
+
+	const fallback = getFallback(isLoading, error, data)
+
+	if (fallback)
+		return (
+			<FallbackMessage
+				message={fallback.message}
+				className={fallback.className}
+			/>
+		)
+
 	return (
 		<section
 			id="my-stack"
@@ -15,18 +28,22 @@ export function Stack() {
 			<div className="container">
 				<Heading text="My Stack" />
 				<div className="space-y-20">
-					<StackItem
-						title="Frontend"
-						stackData={frontendData}
-					/>
-					<StackItem
-						title="Backend"
-						stackData={backendData}
-					/>
-					<StackItem
-						title="Tools"
-						stackData={toolsData}
-					/>
+					{data && (
+						<>
+							<StackItem
+								title="Frontend"
+								stackData={data.frontendData}
+							/>
+							<StackItem
+								title="Backend"
+								stackData={data.backendData}
+							/>
+							<StackItem
+								title="Tools"
+								stackData={data.toolsData}
+							/>
+						</>
+					)}
 				</div>
 			</div>
 		</section>

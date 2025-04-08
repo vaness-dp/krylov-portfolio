@@ -3,16 +3,22 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-import { imageData } from '@/components/projects/projects.data'
+import { IImageData } from '@/components/projects/projects.data'
 
 interface IProjectsImage {
 	offsetY: number
 	isVisible: boolean
 	index: number
+	imagesData: IImageData[]
 }
 
-export function ProjectsImage({ offsetY, isVisible, index }: IProjectsImage) {
-	const item = imageData[index] || imageData[0]
+export function ProjectsImage({
+	offsetY,
+	isVisible,
+	index,
+	imagesData
+}: IProjectsImage) {
+	const item = imagesData[index] || imagesData[0]
 
 	return (
 		<motion.div

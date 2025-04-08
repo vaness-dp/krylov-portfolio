@@ -3,19 +3,21 @@ import React from 'react'
 
 import { ProjectsDot } from '@/components/projects/ProjectsDot'
 import { ProjectsSvg } from '@/components/projects/ProjectsSvg'
-import { projectsData } from '@/components/projects/projects.data'
+import { IProjectsData } from '@/components/projects/projects.data'
 
-interface ProjectsItemProps {
+interface IProjectsItem {
+	projectsData: IProjectsData[]
 	onItemHover: (index: number) => void
 	onItemLeave: () => void
 	hoveredIndex: number | null
 }
 
 export function ProjectsItem({
+	projectsData,
 	onItemHover,
 	onItemLeave,
 	hoveredIndex
-}: ProjectsItemProps) {
+}: IProjectsItem) {
 	return (
 		<>
 			{projectsData.map((item, index) => (

@@ -7,6 +7,8 @@ import { Background } from '@/components/ui/Background'
 import { Mail } from '@/components/ui/Mail'
 import { Scrollbar } from '@/components/ui/Scrollbar'
 
+import { Providers } from '@/providers/Providers'
+
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -34,16 +36,15 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html
-			lang="en"
-			className="scroll-smooth"
-		>
+		<html lang="en">
 			<body className={montserrat.variable}>
-				<MobileMenu />
-				{children}
-				<Scrollbar />
-				<Background />
-				<Mail />
+				<Providers>
+					<MobileMenu />
+					{children}
+					<Scrollbar />
+					<Background />
+					<Mail />
+				</Providers>
 			</body>
 		</html>
 	)

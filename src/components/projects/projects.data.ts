@@ -3,7 +3,7 @@ interface IStackItem {
 	hasDot: boolean
 }
 
-interface IProjectsData {
+export interface IProjectsData {
 	id: string
 	href: string
 	githubHref: string
@@ -16,7 +16,7 @@ interface IProjectsData {
 	stack: IStackItem[] // Массив технологий стека
 }
 
-interface IImageData {
+export interface IImageData {
 	src: string
 	alt: string
 }

@@ -1,4 +1,4 @@
-interface IStackData {
+export interface IStackData {
 	text: string
 	srcImage: string
 	altImage: string
