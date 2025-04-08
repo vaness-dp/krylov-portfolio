@@ -66,9 +66,9 @@
 		}
 	],
 	"imageData": [
-		{ "src": "/images/projects/hangman-game.png", "alt": "Hangman game App" },
-		{ "src": "/images/projects/w-wave.png", "alt": "W-wave Landing Page" },
-		{ "src": "/images/projects/crm-system.png", "alt": "CRM System" },
-		{ "src": "/images/projects/workout-app.png", "alt": "Workout App" }
+		{ "src": "images/projects/hangman-game.png", "alt": "Hangman game App" },
+		{ "src": "images/projects/w-wave.png", "alt": "W-wave Landing Page" },
+		{ "src": "images/projects/crm-system.png", "alt": "CRM System" },
+		{ "src": "images/projects/workout-app.png", "alt": "Workout App" }
 	]
 }
