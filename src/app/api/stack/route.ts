@@ -6,6 +6,9 @@ import {
 	toolsData
 } from '@/components/stack/stack-data'
 
+export const dynamic = 'force-static'
+export const revalidate = 0
+
 export async function GET(request: Request) {
 	const data = {
 		frontendData,
