@@ -1,0 +1,74 @@
+{
+	"projectsData": [
+		{
+			"id": "hangman",
+			"href": "/projects/hangman",
+			"githubHref": "https://github.com/vaness-dp/hangman-game",
+			"linkHref": "https://vaness-dp.github.io/hangman-game/",
+			"numberProject": "_01.",
+			"title": "Hangman",
+			"year": "2024",
+			"tech": "HTML, Tailwind CSS, Javascript",
+			"description": "I developed Hangman, an engaging web-based game...",
+			"stack": [
+				{ "name": "HTML", "hasDot": true },
+				{ "name": "Tailwind CSS", "hasDot": true },
+				{ "name": "Javascript", "hasDot": false }
+			]
+		},
+		{
+			"id": "wwave-radio",
+			"href": "/projects/wwave-radio",
+			"githubHref": "https://github.com/vaness-dp/W-Wave-Radio",
+			"linkHref": "https://vaness-dp.github.io/W-Wave-Radio/",
+			"numberProject": "_02.",
+			"title": "W-Wave Radio",
+			"year": "2023",
+			"tech": "HTML, CSS, Javascript",
+			"description": "I developed Wwave-radio, a captivating landing page...",
+			"stack": [
+				{ "name": "HTML", "hasDot": true },
+				{ "name": "CSS", "hasDot": true },
+				{ "name": "Javascript", "hasDot": false }
+			]
+		},
+		{
+			"id": "crm-system",
+			"href": "/projects/crm-system",
+			"githubHref": "https://github.com/vaness-dp/CRM-system",
+			"linkHref": "https://vaness-dp.github.io/CRM-system/",
+			"numberProject": "_03.",
+			"title": "CRM System",
+			"year": "2024",
+			"tech": "HTML, CSS, Javascript",
+			"description": "I developed CRM-system, a comprehensive landing page...",
+			"stack": [
+				{ "name": "HTML", "hasDot": true },
+				{ "name": "CSS", "hasDot": true },
+				{ "name": "Javascript", "hasDot": false }
+			]
+		},
+		{
+			"id": "workout-app",
+			"href": "/projects/workout-app",
+			"githubHref": "https://github.com/vaness-dp/workout-app",
+			"linkHref": "https://vaness-dp.github.io/workout-app/",
+			"numberProject": "_04.",
+			"title": "Workout App",
+			"year": "2025",
+			"tech": "React.js, SCSS, Axios, React-query",
+			"description": "I developed the Workout App, a dynamic landing page...",
+			"stack": [
+				{ "name": "React.js", "hasDot": true },
+				{ "name": "SCSS", "hasDot": true },
+				{ "name": "Axios", "hasDot": false }
+			]
+		}
+	],
+	"imageData": [
+		{ "src": "/images/projects/hangman-game.png", "alt": "Hangman game App" },
+		{ "src": "/images/projects/w-wave.png", "alt": "W-wave Landing Page" },
+		{ "src": "/images/projects/crm-system.png", "alt": "CRM System" },
+		{ "src": "/images/projects/workout-app.png", "alt": "Workout App" }
+	]
+}
